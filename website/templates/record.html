@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'record.css' %}">
+
+<div class="view-record-container">
+    <div class="record-header">
+        <h2>{{ customer_record.first_name }} {{ customer_record.last_name }} Author: {{ customer_record.author }}</h2>
+        {% if customer_record.author == request.user %}
+            <div class="record-buttons">
+                <a class="update-button" href="{% url 'update_record' customer_record.id %}">
+                    <i class="fas fa-pencil-alt"></i>
+                </a>            
+                
+                <a class="delete-button" href="{% url 'delete_record' customer_record.id %}">
+                    <i class="fas fa-trash-alt" ></i>
+                </a>
+                
+            </div>
+        {% endif %}
+    </div>
+    <div class="record-details">
+        <div class="record-field">
+            <span class="field-label">Email:</span>
+            <span class="field-value">{{ customer_record.email }}</span>
+        </div>
+        <div class="record-field">
+            <span class="field-label">Phone:</span>
+            <span class="field-value">{{ customer_record.phone }}</span>
+        </div>
+        <div class="record-field">
+            <span class="field-label">Address:</span>
+            <span class="field-value">{{ customer_record.address }}</span>
+        </div>
+        <div class="record-field">
+            <span class="field-label">City:</span>
+            <span class="field-value">{{ customer_record.city }}</span>
+        </div>
+        <div class="record-field">
+            <span class="field-label">State:</span>
+            <span class="field-value">{{ customer_record.state }}</span>
+        </div>
+        <div class="record-field">
+            <span class="field-label">Zipcode:</span>
+            <span class="field-value">{{ customer_record.zipcode }}</span>
+        </div>
+        <div class="record-field">
+            <span class="field-label">Created At:</span>
+            <span class="field-value">{{ customer_record.created_at }}</span>
+        </div>
+        <div class="record-field">
+            <span class="field-label">ID:</span>
+            <span class="field-value">{{ customer_record.id }}</span>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

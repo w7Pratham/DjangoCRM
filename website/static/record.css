@@ -1,0 +1,141 @@
+/* Reset some default styles */
+body, h1, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Dark mode background */
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Styling for the container */
+.view-record-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling for record details */
+.record-details {
+    border-top: 2px solid #333;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+/* Styling for each record field */
+.record-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+/* Styling for field label */
+.field-label {
+    flex: 1;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+/* Styling for field value */
+.field-value {
+    flex: 2;
+    font-size: 18px;
+    color: #ccc;
+}
+
+/* Styling for links */
+a {
+    color: #64b5f6;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #42a5f5;
+}
+
+/* Add a subtle hover animation */
+.record-field:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .view-record-container {
+        padding: 20px;
+    }
+
+    .view-record-container h2 {
+        font-size: 30px;
+    }
+
+    .field-label, .field-value {
+        font-size: 16px;
+    }
+}
+
+/* Styling for the header */
+.view-record-container h2 {
+    font-size: 36px;
+    text-align: left; /* Align heading to the left */
+}
+
+/* Styling for the header and buttons container */
+.record-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling for the header */
+.record-header h2 {
+    font-size: 36px;
+    text-align: left;
+}
+
+/* Styling for the buttons */
+.record-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Styling for the buttons within the buttons container */
+.record-buttons .btn {
+    font-size: 16px;
+}
+
+/* Styling for the dustbin delete button */
+.delete-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.delete-button i {
+    font-size: 24px; /* Adjust the size of the icon */
+    color: #8e1313; /* Adjust the color of the icon */
+}
+
+/* Styling for the update button */
+.update-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.update-button i {
+    font-size: 20px; /* Adjust the size of the icon */
+    color: #007bff; /* Adjust the color of the icon */
+}

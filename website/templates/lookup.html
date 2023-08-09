@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home1s.css' %}">
+
+    <div class="login-box">
+        <h2>Record Table</h2>
+        <div class="record-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zipcode</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% if records %}
+              {% for record in records %}
+                <tr>
+                  <td>{{ record.first_name }} {{ record.last_name }}</td>
+                  <td>{{ record.email }}</td>
+                  <td>{{ record.phone }}</td>
+                  <td>{{ record.address }}</td>
+                  <td>{{ record.city }}</td>
+                  <td>{{ record.state }}</td>
+                  <td>{{ record.zipcode }}</td>
+                </tr>
+              {% endfor %}
+            {% endif %}
+            </tbody>
+          </table>
+        </div>
+    </div>
+    
+{% endblock %}

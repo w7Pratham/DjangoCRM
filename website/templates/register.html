@@ -1,0 +1,49 @@
+<!-- registration_form.html -->
+
+<!-- registration_form.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+
+<div class="login-box">
+    <h2>Register</h2>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="user-box">
+        <input type="text" name="{{ form.username.name }}" required>
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="{{ form.first_name.name }}" required>
+        <label>First Name</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="{{ form.last_name.name }}" required>
+        <label>Last Name</label>
+      </div>
+      <div class="user-box">
+        <input type="email text" name="{{ form.email.name }}" required>
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="{{ form.password1.name }}" required>
+        <label>Password</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="{{ form.password2.name }}" required>
+        <label>Confirm Password</label>
+      </div>
+      <button class="btn"><a type="submit">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Register
+      </a></button>
+    </form>
+  </div>
+  
+{% endblock %}

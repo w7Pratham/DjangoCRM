@@ -1,0 +1,40 @@
+/* Set the background color for the entire page */
+body {
+    background-color: #343a40;
+    color: white;
+}
+
+/* Style the table */
+.record-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.record-table th, .record-table td {
+    padding: 15px;
+    border-bottom: 1px solid #343a40;
+}
+
+/* Style the table header */
+.record-table th {
+    background-color: #212529;
+}
+
+/* Style the table rows */
+.record-table tr {
+    background-color: #212529; /* Dark background color */
+}
+
+/* Change text color on hover */
+.record-table tr:hover td {
+    color: rgb(218, 255, 251); /* Change text color on hover */
+}
+
+.custom-link {
+    text-decoration : none;
+    color : white;
+}
+
+.custom-link:hover {
+    color: rgb(218, 255, 251);
+}
