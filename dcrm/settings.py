@@ -80,24 +80,14 @@ WSGI_APPLICATION = "dcrm.wsgi.application"
 # DATABASES = {
 #     "default": {
 #         "ENGINE" : "django.db.backends.mysql",
-#         "NAME" : "SHIV_CRM_DB",
+#         "NAME" : "",
 #         "USER" : "root",
-#         "PASSWORD" : "wArther17",
+#         "PASSWORD" : "",
 #         "HOST" : "127.0.0.1",
 #         "PORT" : "3306"
 #     }
 # }
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "dcrm$SHIV_CRM_DB",  # Note the format: '<username>$<database_name>'
-        "USER": "dcrm",  # Your PythonAnywhere MySQL username
-        "PASSWORD": "wArther17",  # Set your database password here
-        "HOST": "dcrm.mysql.pythonanywhere-services.com",  # Your MySQL host address on PythonAnywhere
-        "PORT": "",  # Leave empty or set to the default port (3306)
-    }
-}
 
 
 
